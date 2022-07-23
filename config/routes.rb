@@ -44,6 +44,7 @@ resources :categories, only: [:index, :create, :show, :update, :destroy] do
       end
     end
 
+    get 'conversions/weight', to: 'conversions#weight'
   end
 
   # jitera-anchor-dont-touch: webhooks

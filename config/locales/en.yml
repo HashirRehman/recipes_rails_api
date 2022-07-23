@@ -7,3 +7,6 @@ en:
   errors:
     unauthorized_error: Unauthorized
     record_not_uniq_error: Record not uniq
+    missing_weight: Please specifiy the weight that needs to be converted
+    missing_from_unit: Please specify the current unit of the weight
+    missing_to_unit: Please specify in which unit you want to convert the weight
