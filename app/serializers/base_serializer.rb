@@ -30,4 +30,12 @@ class BaseSerializer < ActiveModel::Serializer
       Rails.env.development? || Rails.env.test? ? url_for(file) : file.url
     end
   end
+
+  def self.searchkick_attributes(fields)
+    fields.each do |method|
+      define_method method.to_s do
+        object[method]
+      end
+    end
+  end
 end

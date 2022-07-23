@@ -38,9 +38,15 @@ resources :ingredients, only: [:index, :create, :show, :update, :destroy] do
 resources :categories, only: [:index, :create, :show, :update, :destroy] do
  end
 
-resources :recipes, only: [:index, :create, :show, :update, :destroy] do
- end
+    resources :recipes, only: [:index, :create, :show, :update, :destroy] do
+      collection do
+        get :search
+      end
 
+      resources :ratings, only: %i[index create show update destroy]
+    end
+
+    get 'conversions/weight', to: 'conversions#weight'
   end
 
   # jitera-anchor-dont-touch: webhooks

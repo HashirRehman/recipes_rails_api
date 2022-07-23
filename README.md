@@ -17,6 +17,7 @@
 - Node.js 14.15.1
 - Yarn 1.22.x
 - MySQL 8.0.x
+- Elasticsearch (opensearch) >= 2.0.0
 
 ## Setup
 
@@ -60,6 +61,13 @@ Start mysql and setup database
 ```bash
 bin/rake db:create db:migrate db:seed
 ````
+
+Reindex
+
+```bash
+## API server
+bin/rails searchkick:reindex:all
+```
 
 Start the app
 

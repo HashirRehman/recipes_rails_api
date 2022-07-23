@@ -55,4 +55,10 @@ class Api::RecipesController < Api::BaseController
 
     @recipes = Recipe.all
   end
+
+  def search
+    @recipes = Recipe.search_for_index(params)
+
+    render json: @recipes, each_serializer: RecipeSerializer
+  end
 end
