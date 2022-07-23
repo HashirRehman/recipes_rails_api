@@ -30,6 +30,8 @@ gem 'puma', '~> 5.5.2'
 gem 'pundit'
 gem 'rack-cors'
 gem 'rails', '~> 7.0.1'
+gem 'elasticsearch', '~> 7.13.3'
+gem 'searchkick'
 gem 'rails-i18n'
 # jitera-hook-for-rollbar
 gem 'sass-rails', '~> 5'

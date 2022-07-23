@@ -1,5 +1,7 @@
 class Recipe < ApplicationRecord
   include ConstantValidatable
+  include RecipeSearch
+  include ElasticSearchConcern
 
   # jitera-anchor-dont-touch: relations
 

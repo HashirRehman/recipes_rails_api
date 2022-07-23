@@ -38,8 +38,11 @@ resources :ingredients, only: [:index, :create, :show, :update, :destroy] do
 resources :categories, only: [:index, :create, :show, :update, :destroy] do
  end
 
-resources :recipes, only: [:index, :create, :show, :update, :destroy] do
- end
+    resources :recipes, only: [:index, :create, :show, :update, :destroy] do
+      collection do
+        get :search
+      end
+    end
 
   end
 
