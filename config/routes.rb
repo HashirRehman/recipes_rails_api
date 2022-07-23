@@ -42,6 +42,8 @@ resources :categories, only: [:index, :create, :show, :update, :destroy] do
       collection do
         get :search
       end
+
+      resources :ratings, only: %i[index create show update destroy]
     end
 
     get 'conversions/weight', to: 'conversions#weight'
